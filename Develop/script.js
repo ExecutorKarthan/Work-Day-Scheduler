@@ -2,6 +2,16 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+    document.addEventListener("click", function (event) {
+      var hourID = event.target.parentElement.parentElement.getAttribute("id")
+      var hourRow = $("#"+hourID).children()
+      var id = hourRow[0].getAttribute("class");
+      var actionItems = $(hourRow[1]).val();
+      localStorage.setItem(id, actionItems)
+      var test = localStorage.getItem(id)
+      console.log(test)
+    });
+    
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
