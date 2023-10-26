@@ -55,12 +55,17 @@ function displayCurrentDay(){
 //Create a function that will save items in the textArea to local storage, as well as run run the other two functions continuously
 $(function () {
     document.addEventListener("click", function (event) {
-      //Determine the hourID based on what was clicked
-      var hourID = event.target.parentElement.parentElement.getAttribute("id");
-      var hourRow = $("#"+hourID).children();
-      //Get the value put into the appointment textArea and save it to local storage with its ID as the key for easy retrieval
-      var actionItems = $(hourRow[1]).val();
-      localStorage.setItem(hourID, actionItems)     
+      //Determine the correct row based on item clicked
+      var itemClicked = event.target.getAttribute("class")
+      var rowID = event.target.parentElement.getAttribute("id");
+      var hourRow = $("#"+rowID).children();
+      var saveButton = hourRow[2].getAttribute("class")
+      //If the save button was clicked, save the data into local storage
+      if(itemClicked == saveButton){
+        var actionItems = $(hourRow[1]).val();
+        localStorage.setItem(rowID, actionItems) 
+      }
+      //console.log(localStorage.getItem(hourID))
     });
     //Call the updateRows function so each row can have is content and color updated
     updateRows();
