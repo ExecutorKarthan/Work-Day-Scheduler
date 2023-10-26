@@ -1,7 +1,9 @@
 # Live Project
-
-![Alt text](<>)
-<a href="">Video Demo </a>
+<a href="https://executorkarthan.github.io/Work-Day-Scheduler/">Link to the live pages</a>
+GIFFs showing the program's functionality
+![Work Day Scheduler - color changes](https://github.com/ExecutorKarthan/Work-Day-Scheduler/assets/120221657/fa44694c-f3d5-4f98-bdd4-ea6f7e228cef)
+![Work Day Scheduler](https://github.com/ExecutorKarthan/Work-Day-Scheduler/assets/120221657/8b1b2823-b649-4bfc-965e-308f0e6a03c3)
+<a href="https://github.com/ExecutorKarthan/Work-Day-Scheduler/assets/120221657/3f431b8f-3e90-46cd-9af1-a14ecba5ab43">Here is a clipped video of the program running</a>
 
 # Description
 This is a workday scheduler that keeps track of events occurring during the user's work day, specially between the hours of 9am and 5pm. This project was an excellent learning experience in DOM navigation, JQuery, and creating JQuery functions. I utilized ".getAttribute()" to select classes and ID values. This allowed me to easily locate the elements that needed to be updated, then update them from local storage. 
